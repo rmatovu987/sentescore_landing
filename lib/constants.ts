@@ -221,25 +221,25 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     quote:
       'SenteScore cut our loan approval time from 3 days to under 4 minutes. Defining our own scoring parameters for our local market was the game-changer we needed.',
-    author: 'Chukwuemeka Obi',
-    role: 'Head of Credit, AfriLend',
-    initials: 'CO',
+    author: 'John Doe',
+    role: 'Head of Credit, Test',
+    initials: 'JD',
     color: 'emerald',
   },
   {
     quote:
       'We run 5 different loan products on SenteScore simultaneously. One dashboard for all applications while each product keeps its own workflow is exactly what growing teams need.',
-    author: 'Priya Sharma',
-    role: 'CTO, NeoFinance Kenya',
-    initials: 'PS',
+    author: 'Jane Doe',
+    role: 'CTO, Test Microfinance',
+    initials: 'JD',
     color: 'sky',
   },
   {
     quote:
       'Alternative data scoring opened up lending to customers invisible to traditional bureaus. Our approved portfolio doubled in 6 months.',
-    author: 'Ibrahim Al-Hassan',
-    role: 'Director of Lending, MicroPros',
-    initials: 'IA',
+    author: 'Joe Doe',
+    role: 'Director of Lending, Test MF',
+    initials: 'JD',
     color: 'purple',
   },
 ]

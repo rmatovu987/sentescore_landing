@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Fraunces, Plus_Jakarta_Sans, JetBrains_Mono } from 'next/font/google'
 import { generateMetadata, structuredData } from '@/lib/metadata'
 import './globals.css'
+import { Analytics } from '@vercel/analytics/next';
 
 // ─── FONTS ───────────────────────────────────────────────────────────────────
 const fraunces = Fraunces({
@@ -60,6 +61,7 @@ export default function RootLayout({
       </head>
       <body className="font-body antialiased">
         {children}
+      <Analytics />
       </body>
     </html>
   )
