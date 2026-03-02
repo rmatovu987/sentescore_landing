@@ -102,7 +102,7 @@ export const PLANS: Plan[] = [
       users: 'Unlimited',
       storage: '50 GB',
       support: '< 24h email & WhatsApp',
-      integrations: '> $500 (first 3 free)',
+      integrations: '> $500',
     },
     accentColor: 'emerald',
   },
