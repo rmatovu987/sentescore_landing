@@ -98,6 +98,7 @@ export const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: SITE.name,
+    alternateName: SITE.name,
     url: SITE.url,
     logo: `${SITE.url}/logo.png`,
     contactPoint: {
