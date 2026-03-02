@@ -137,7 +137,7 @@ export default function Pricing({ showHeader = true }: PricingProps) {
             ✨ Optional — Exclusivity Package
           </div>
           <p className="text-[var(--color-text-secondary)] text-sm leading-relaxed max-w-xl mx-auto">
-            <strong className="text-[var(--color-text-primary)]">$5,000 one-time fee.</strong>{' '}
+            <strong className="text-[var(--color-text-primary)]">$15,000 one-time fee.</strong>{' '}
             Lock in exclusive platform features and prevent competitors in your region from accessing
             the same configuration. Available on all plans.
           </p>
