@@ -41,11 +41,10 @@ export default function Pricing({ showHeader = true }: PricingProps) {
         {/* Billing toggle */}
         <div className="flex items-center justify-center gap-4 mb-10 reveal from-bottom">
           <span
-            className={`text-sm transition-colors ${
-              !isAnnual
-                ? 'text-[var(--color-text-primary)] font-medium'
-                : 'text-[var(--color-text-muted)]'
-            }`}
+            className={`text-sm transition-colors ${!isAnnual
+              ? 'text-[var(--color-text-primary)] font-medium'
+              : 'text-[var(--color-text-muted)]'
+              }`}
           >
             Monthly
           </span>
@@ -53,22 +52,19 @@ export default function Pricing({ showHeader = true }: PricingProps) {
             onClick={() => setIsAnnual(!isAnnual)}
             aria-pressed={isAnnual}
             aria-label="Toggle annual billing"
-            className={`relative w-14 h-7 rounded-full border-none cursor-pointer transition-colors duration-300 ${
-              isAnnual ? 'bg-emerald-500' : 'bg-slate-300 dark:bg-slate-600'
-            }`}
+            className={`relative w-14 h-7 rounded-full border-none cursor-pointer transition-colors duration-300 ${isAnnual ? 'bg-emerald-500' : 'bg-slate-300 dark:bg-slate-600'
+              }`}
           >
             <span
-              className={`absolute top-0.5 w-6 h-6 bg-white rounded-full shadow-md transition-all duration-300 ${
-                isAnnual ? 'right-0.5 left-auto' : 'left-0.5'
-              }`}
+              className={`absolute top-0.5 w-6 h-6 bg-white rounded-full shadow-md transition-all duration-300 ${isAnnual ? 'right-0.5 left-auto' : 'left-0.5'
+                }`}
             />
           </button>
           <span
-            className={`text-sm transition-colors ${
-              isAnnual
-                ? 'text-[var(--color-text-primary)] font-medium'
-                : 'text-[var(--color-text-muted)]'
-            }`}
+            className={`text-sm transition-colors ${isAnnual
+              ? 'text-[var(--color-text-primary)] font-medium'
+              : 'text-[var(--color-text-muted)]'
+              }`}
           >
             Annual{' '}
             <span className="text-emerald-500 font-mono text-xs">Save 10%</span>
@@ -130,7 +126,7 @@ export default function Pricing({ showHeader = true }: PricingProps) {
 
         {/* Exclusivity */}
         <div
-          className="card rounded-2xl p-6 border border-amber-300/40 dark:border-amber-500/20 reveal from-bottom text-center"
+          className="card rounded-2xl mb-6 p-6 border border-amber-300/40 dark:border-amber-500/20 reveal from-bottom text-center"
           style={{ background: 'rgba(251,191,36,0.03)' }}
         >
           <div className="text-amber-600 dark:text-amber-400 font-semibold text-sm mb-2">
@@ -139,8 +135,47 @@ export default function Pricing({ showHeader = true }: PricingProps) {
           <p className="text-[var(--color-text-secondary)] text-sm leading-relaxed max-w-xl mx-auto">
             <strong className="text-[var(--color-text-primary)]">$15,000 one-time fee.</strong>{' '}
             Lock in exclusive platform features and prevent competitors in your region from accessing
-            the same configuration. Available on all plans.
+            the same configuration. Available on all plans. Contact us for details and eligibility.
           </p>
+        </div>
+
+        {/* Disclaimer */}
+        <div className="card rounded-2xl p-8 border border-[var(--color-border)] bg-[var(--color-bg-secondary)]/50 reveal from-bottom">
+          <div className="flex items-center gap-2 mb-4">
+            <div className="h-px w-8 bg-[var(--color-text-secondary)] opacity-30"></div>
+            <span className="text-[var(--color-text-primary)] font-bold text-xs uppercase tracking-widest">
+              Important Information
+            </span>
+          </div>
+
+          <div className="grid md:grid-cols-3 mt-3 gap-8">
+            {/* General Info */}
+            <div className="md:col-span-1">
+              <p className="text-[var(--color-text-secondary)] text-sm leading-relaxed">
+                All pricing is in <span className="text-[var(--color-text-primary)] font-medium">USD</span>.
+                Onboarding fees cover initial setup, training, and support.
+                Year 2+ pricing reflects ongoing annual access and updates.
+              </p>
+            </div>
+
+            {/* Specific Notes */}
+            <div className="md:col-span-2 space-y-4 border-l border-[var(--color-border)] pl-8">
+              <div className="flex gap-3">
+                <span className="text-[var(--color-text-primary)] font-mono text-xs mt-1">01</span>
+                <p className="text-[var(--color-text-secondary)] text-xs leading-relaxed">
+                  Prices are subject to change based on market conditions and may vary for enterprise customers.
+                  Contact us for custom quotes and volume discounts.
+                </p>
+              </div>
+              <div className="flex gap-3">
+                <span className="text-[var(--color-text-primary)] font-mono text-xs mt-1">02</span>
+                <p className="text-[var(--color-text-secondary)] text-xs leading-relaxed">
+                  Prices are exclusive of applicable taxes, which will be added at checkout.
+                  We recommend consulting with a tax advisor regarding your purchase.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -170,11 +205,10 @@ function PlanCard({
 
   return (
     <article
-      className={`flex flex-col rounded-2xl p-7 transition-transform duration-300 hover:-translate-y-1.5 reveal from-bottom reveal-d${revealDelay} ${
-        plan.popular
-          ? 'plan-popular bg-[var(--color-surface)]'
-          : 'card'
-      }`}
+      className={`flex flex-col rounded-2xl p-7 transition-transform duration-300 hover:-translate-y-1.5 reveal from-bottom reveal-d${revealDelay} ${plan.popular
+        ? 'plan-popular bg-[var(--color-surface)]'
+        : 'card'
+        }`}
       aria-label={`${plan.name} plan`}
     >
       {/* Popular bar */}
@@ -218,22 +252,20 @@ function PlanCard({
 
         {/* Breakdown box */}
         <div
-          className={`mt-3 p-3 rounded-xl border text-xs ${
-            plan.popular
-              ? 'bg-emerald-50 dark:bg-emerald-900/20 border-emerald-200 dark:border-emerald-800'
-              : 'bg-[var(--color-surface-2)] border-[var(--color-border)]'
-          }`}
+          className={`mt-3 p-3 rounded-xl border text-xs ${plan.popular
+            ? 'bg-emerald-50 dark:bg-emerald-900/20 border-emerald-200 dark:border-emerald-800'
+            : 'bg-[var(--color-surface-2)] border-[var(--color-border)]'
+            }`}
         >
           <div className="flex justify-between mb-1">
             <span className="text-[var(--color-text-secondary)]">
               Year 1 total ({isAnnual ? 'annual' : 'monthly'})
             </span>
             <span
-              className={`font-semibold ${
-                plan.popular
-                  ? 'text-emerald-600 dark:text-emerald-400'
-                  : 'text-[var(--color-text-primary)]'
-              }`}
+              className={`font-semibold ${plan.popular
+                ? 'text-emerald-600 dark:text-emerald-400'
+                : 'text-[var(--color-text-primary)]'
+                }`}
             >
               {formatCurrency(year1Total)}
             </span>

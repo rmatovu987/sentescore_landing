@@ -96,8 +96,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="pt-8 border-t border-[var(--color-border)] flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-[var(--color-text-muted)]">
-            © {new Date().getFullYear()} {SITE.name}. All rights reserved. Hosted at{' '}
-            <span className="font-mono">sentescore.com</span>
+            © {new Date().getFullYear()} {SITE.name}. All rights reserved.
           </p>
           <div className="flex items-center gap-2 text-xs text-[var(--color-text-muted)]">
             <span className="dot-pulse w-2 h-2 rounded-full bg-emerald-500 inline-block" />
